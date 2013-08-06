@@ -4,6 +4,7 @@ group :development do
   gem 'sqlite3'
 end
 
+gem 'rails_12factor'
 gem 'pg'
 gem 'sass-rails'
 
