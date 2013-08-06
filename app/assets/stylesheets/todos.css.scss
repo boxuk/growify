@@ -1,3 +1,29 @@
 // Place all the styles related to the Todos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+th, td {
+	padding: 5px 50px;
+	text-align: left;
+	color:#ddd;
+}
+
+td {
+	border-bottom: 2px solid #f5f5f5;
+}
+
+tr {
+	width:100%;
+}
+
+tr.high {
+	background-color:red;
+}
+
+tr.low {
+	background-color:green;
+}
+
+tbody {
+}

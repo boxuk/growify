@@ -1,12 +1,12 @@
 class PlantsController < ApplicationController
 
-  load_and_authorize_resource
+  #load_and_authorize_resource
   before_action :set_plant, only: [:show, :edit, :update, :destroy]
 
   # GET /plants
   # GET /plants.json
   def index
-    @plants = Plant.accessible_by(current_ability)
+    @plants = Plant.all
   end
 
   # GET /plants/1
@@ -71,6 +71,6 @@ class PlantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def plant_params
-      params.require(:plant).permit(:name)
+      params.require(:plant).permit(:name, :user_id)
     end
 end

@@ -1,29 +1,22 @@
-<h1>Listing todos</h1>
+<h1>Overview</h1>
 
 <table>
-  <thead>
+  <!-- <thead>
     <tr>
+      <th></th>
       <th>Plant</th>
       <th>Message</th>
-      <th></th>
-      <th></th>
-      <th></th>
     </tr>
-  </thead>
+  </thead> -->
 
   <tbody>
-    <% @todos.each do |todo| %>
-      <tr>
-        <td><%= todo.plant_id %></td>
+    <% @todos.each_with_index do |todo, i| %>
+      <tr style="background: #<%= 9 - i %><%= 0 + i %>0" class="<%= cycle('high', 'low')%>">
+        <td><%= check_box_tag :_delete %></td>
+        <td><%= todo.plant.name %></td>
         <td><%= todo.message %></td>
-        <td><%= link_to 'Show', todo %></td>
-        <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
-        <td><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Todo', new_todo_path %>

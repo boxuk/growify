@@ -1,15 +1,130 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Growify</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-<%= yield %>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Growify App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+		<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+		<%# javascript_include_tag "application", "data-turbolinks-track" => true %>
+		<%= csrf_meta_tags %>
+
+        <style type="text/css">
+          body {
+            background-repeat: no-repeat;
+            padding-top: 60px;
+            padding-bottom: 40px;
+            font-family: 'Raleway', sans-serif;
+          }
+        </style>
+       
+     
+       
+        <script>
+            window.setInterval(function() {
+                var box = $(".alert_class");
+                var id  = $(box).attr("id");
+                if(id == "red") {
+                    $(box).attr("id", "whiteish");
+                    return false;
+                } else {
+                    $(box).attr("id", "red");
+                    return false;
+                }
+            }, 750);
+
+        </script>
+
+
+
+    <style type="text/css"></style></head>
+
+    <body style="">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="">Growify</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                           
+                       
+                            
+                         
+                        </ul>
+                        
+                        <a class="logout btn btn-success pull-right" href="#">Logout</a>
+                        <a class="setting btn btn-success pull-right" href="#">Settings</a>    
+                        
+                        
+                    </div>
+                 </div>
+            </div>
+        </div>
+
+       
+
+        <div class="container">
+                                            
+                <h2>My Dashboard <small> Last Updated on August 6th, 11:00 PM</small></h2><hr>
+
+
+                     
+            
+            
+                <div class="row">
+                    <div class="span3 well">
+                        <ul class="nav nav-list">
+                            
+                            <li class=""><a href="#alerts" id="red" class="alert_class" style="color: #fff;" data-toggle="tab">Alerts</a></li><li class="nav-divider"></li>                            
+                            
+                            <li class="nav-header">Main Menu</li>
+
+                           	<li class="active"><%= link_to 'Overview', todos_path %></li>
+                            <li class=""><%= link_to 'My Plants', plants_path %></li>
+
+                            <li class="nav-header">Settings</li>
+
+                            <li class=""><a href="#settings" data-toggle="tab">Account</a></li>
+                            <li class=""><a href="#">Logout</a></li>
+
+
+                        </ul>
+                    </div>
+                    <div class="span8 well well-small" style="float:right;">
+                        <div class="tabbable"> 
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="overview">
+                                 <%= yield %>
+                            
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+
+
+                        <hr>
+
+            <footer>
+                <p>© Growify 2013. Developed as part of YRS 2013 by Ben, Maddy, Dan and Alex </p>
+                
+            </footer>
+
+        </div>
+        
+        
+       
+
+    
 
 </body>
 </html>
