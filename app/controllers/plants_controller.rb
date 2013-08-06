@@ -53,6 +53,14 @@ class PlantsController < ApplicationController
     end
   end
 
+  def update_moisture
+    plant = Plant.find(params[:id])
+    plant.moisture_level = params[:moisture]
+    
+    plant.save
+    redirect_to plants_url
+  end
+
   # DELETE /plants/1
   # DELETE /plants/1.json
   def destroy
@@ -71,6 +79,6 @@ class PlantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def plant_params
-      params.require(:plant).permit(:name, :user_id)
+      params.require(:plant).permit(:name, :user_id, :priority)
     end
 end

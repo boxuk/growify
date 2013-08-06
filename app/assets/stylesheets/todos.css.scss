@@ -2,11 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.donebutton {
+	padding-top:20px;
+}
+
+.todoclass {
+	color:#ddd;
+}
+
+.blue_list {
+	color:#0088CC;
+}
 
 th, td {
 	padding: 5px 50px;
 	text-align: left;
-	color:#ddd;
 }
 
 td {
@@ -18,12 +28,35 @@ tr {
 }
 
 tr.high {
-	background-color:red;
+	background-color:#FF0000;
+}
+tr.medium {
+	background-color:#0088CC;
 }
 
 tr.low {
-	background-color:58B058;
+	background-color:#53A653;
 }
 
-tbody {
+table {
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0; 
+}
+
+tr:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+tr:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+tr:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
 }

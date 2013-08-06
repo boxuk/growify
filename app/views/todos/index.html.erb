@@ -1,5 +1,12 @@
-<h1>Overview</h1>
+<h2>Overview</h2>
 
+<style type="text/css">
+tbody {
+  color:#dddddd;
+}a {
+  color:#ddd;
+}
+</style>
 <table>
   <!-- <thead>
     <tr>
@@ -11,12 +18,12 @@
 
   <tbody>
     <% @todos.each_with_index do |todo, i| %>
-      <tr style="background: #<%= 9 - i %><%= 0 + i %>0" class="<%= cycle('high', 'low')%>">
-        <td><%= check_box_tag :_delete %></td>
-        <td><%= todo.plant.name %></td>
+      <tr  class="<%= todo.priority %>">
+        <td class="donebutton"><%= button_to 'Done', todo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to todo.plant.name, todo.plant, style:'color:#ddd;' %></td>
         <td><%= todo.message %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+</tbody>

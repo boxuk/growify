@@ -17,6 +17,7 @@
             padding-top: 60px;
             padding-bottom: 40px;
             font-family: 'Raleway', sans-serif;
+            
           }
         </style>
        
@@ -80,19 +81,20 @@
             
                 <div class="row">
                     <div class="span3 well">
-                        <ul class="nav nav-list">
+                        <ul class="blue_list nav nav-list">
                             
-                            <li class=""><a href="#alerts" id="red" class="alert_class" style="color: #fff;" data-toggle="tab">Alerts</a></li><li class="nav-divider"></li>                            
+                            <li class=""><a href="#alerts" id="red" class="alert_class" style="color: #fff;" data-toggle="tab">You have a new Alert!</a></li><li class="nav-divider"></li>                            
                             
                             <li class="nav-header">Main Menu</li>
 
-                           	<li class="active"><%= link_to 'Overview', todos_path %></li>
-                            <li class=""><%= link_to 'My Plants', plants_path %></li>
+
+                           	<li class=""><%= link_to 'Overview', todos_path, class: 'blue_list' %></li>
+                            <li class=""><%= link_to 'My Plants', plants_path, class: 'blue_list' %></li>
 
                             <li class="nav-header">Settings</li>
 
-                            <li class=""><a href="#settings" data-toggle="tab">Account</a></li>
-                            <li class=""><a href="#">Logout</a></li>
+                            <li class=""><a href="#settings" data-toggle="tab" class="blue_list" >Account</a></li>
+                            <li class=""><a href="#" class="blue_list">Logout</a></li>
 
 
                         </ul>
@@ -122,6 +124,19 @@
         </div>
         
         
+        <script src="assets/jquery.js"></script>
+        <script src="assets/bootstrap-transition.js"></script>
+        <script src="assets/bootstrap-alert.js"></script>
+        <script src="assets/bootstrap-modal.js"></script>
+        <script src="assets/bootstrap-dropdown.js"></script>
+        <script src="assets/bootstrap-scrollspy.js"></script>
+        <script src="assets/bootstrap-tab.js"></script>
+        <script src="assets/bootstrap-tooltip.js"></script>
+        <script src="assets/bootstrap-popover.js"></script>
+        <script src="assets/bootstrap-button.js"></script>
+        <script src="assets/bootstrap-collapse.js"></script>
+        <script src="assets/bootstrap-carousel.js"></script>
+        <script src="assets/bootstrap-typeahead.js"></script>
        
 
     

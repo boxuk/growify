@@ -1,8 +1,9 @@
 Growify::Application.routes.draw do
   devise_for :users
   resources :todos
-
   resources :plants
+
+  match 'plants/:id/:moisture' => 'plants#update_moisture', :via => :get
 
   root :to => 'plants#index'
 
