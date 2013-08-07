@@ -5,13 +5,13 @@ group :development do
 end
 
 gem 'rails_12factor'
-gem 'pg'
 gem 'sass-rails'
+gem 'puma'
+gem 'pg'
 
 gem 'uglifier', '>= 1.3.0'
 
 gem 'coffee-rails'
-gem 'puma'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
