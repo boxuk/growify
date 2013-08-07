@@ -7,6 +7,8 @@ class TodosController < ApplicationController
   def index
     plants = Plant.where(user: current_user)
     @todos = plants.collect { |plant| plant.todos }.flatten
+    w_api = Wunderground.new('f7c72c9acebd77f2')
+    @weather = w_api.forecast_for('UK', 'Cardiff')['response']
   end
 
   # GET /todos/1
