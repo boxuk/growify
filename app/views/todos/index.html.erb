@@ -1,8 +1,13 @@
 <h3>Tasks</h3>
 
 <%# @weather.inspect %>
+
+<%# @weather.inspect %>
+
 <p style="font-weight:bold;">Location: 
-<%= @weather["results"].first["name"] %>
+<%= @weather["location"]["city"] %>
+&nbsp;&nbsp;Weather:
+<%= image_tag @weather["current_observation"]["icon_url"] %>
 </p>
 
 <style type="text/css">
