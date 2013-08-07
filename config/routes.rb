@@ -1,11 +1,12 @@
 Growify::Application.routes.draw do
+  get "pages/home"
   devise_for :users
   resources :todos
   resources :plants
 
   match 'plants/:id/:moisture' => 'plants#update_moisture', :via => :get
 
-  root :to => 'plants#index'
+  root :to => 'todos#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

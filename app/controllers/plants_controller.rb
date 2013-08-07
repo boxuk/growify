@@ -1,4 +1,5 @@
 class PlantsController < ApplicationController
+  before_filter :authenticate_user!, :except => [:update]
 
   #load_and_authorize_resource
   before_action :set_plant, only: [:show, :edit, :update, :destroy]
@@ -6,7 +7,7 @@ class PlantsController < ApplicationController
   # GET /plants
   # GET /plants.json
   def index
-    @plants = Plant.all
+    @plants = Plant.where(user: current_user)
   end
 
   # GET /plants/1
@@ -27,6 +28,7 @@ class PlantsController < ApplicationController
   # POST /plants.json
   def create
     @plant = Plant.new(plant_params)
+    @plant.user = current_user
 
     respond_to do |format|
       if @plant.save

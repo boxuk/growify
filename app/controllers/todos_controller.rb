@@ -1,10 +1,12 @@
 class TodosController < ApplicationController
+  before_filter :authenticate_user!
   before_action :set_todo, only: [:show, :edit, :update, :destroy]
 
   # GET /todos
   # GET /todos.json
   def index
-    @todos = Todo.all
+    plants = Plant.where(user: current_user)
+    @todos = plants.collect { |plant| plant.todos }.flatten
   end
 
   # GET /todos/1

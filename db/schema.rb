@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130806125332) do
+ActiveRecord::Schema.define(version: 20130807124506) do
 
   create_table "plants", force: true do |t|
     t.string   "name"
@@ -19,6 +19,9 @@ ActiveRecord::Schema.define(version: 20130806125332) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.decimal  "moisture_level"
+    t.integer  "light_level"
+    t.integer  "humidity_level"
+    t.decimal  "temperature"
   end
 
   create_table "todos", force: true do |t|

@@ -1,13 +1,27 @@
 // Place all the styles related to the Todos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-.donebutton {
-	padding-top:20px;
+a {
+    color:white;
 }
 
+.newplantlink {
+    color:#0088CC;
+}
+
+
+.donebutton {
+	padding:5px 0;
+    text-align:center;
+}
+
+.donebutton form {
+    margin-bottom: 0;
+}
+
+
 .todoclass {
-	color:#ddd;
+	color:white;
 }
 
 .blue_list {
@@ -15,8 +29,10 @@
 }
 
 th, td {
-	padding: 5px 50px;
+	padding: 0px 50px;
 	text-align: left;
+    width:25%;
+    height: 5px;
 }
 
 td {
@@ -24,11 +40,11 @@ td {
 }
 
 tr {
-	width:100%;
+	width:600px;
 }
 
 tr.high {
-	background-color:#FF0000;
+	background-color:black;
 }
 tr.medium {
 	background-color:#0088CC;

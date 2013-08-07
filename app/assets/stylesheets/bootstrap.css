@@ -237,7 +237,7 @@ a {
 
 a:hover,
 a:focus {
-  color: white;
+  color: rgb(154, 154, 154);
   text-decoration: underline;
 }
 
@@ -4005,7 +4005,7 @@ input[type="submit"].btn.btn-mini {
 .nav-list > .active > a,
 .nav-list > .active > a:hover,
 .nav-list > .active > a:focus {
-  color: #ffffff;
+  color: #154154;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
   background-color: #0088cc;
 }

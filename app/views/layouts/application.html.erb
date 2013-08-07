@@ -8,7 +8,7 @@
         <meta name="author" content="">
 
 		<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-		<%# javascript_include_tag "application", "data-turbolinks-track" => true %>
+		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 		<%= csrf_meta_tags %>
 
         <style type="text/css">
@@ -59,9 +59,10 @@
                             
                          
                         </ul>
-                        
-                        <a class="logout btn btn-success pull-right" href="#">Logout</a>
-                        <a class="setting btn btn-success pull-right" href="#">Settings</a>    
+                        <% if current_user %>
+                        <%= link_to 'Logout', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }, class: 'logout btn btn-success pull-right' %>
+                        <%= link_to 'Settings', edit_user_registration_path, class: 'setting btn btn-success pull-right' %>
+                        <% end %>
                         
                         
                     </div>
@@ -69,36 +70,35 @@
             </div>
         </div>
 
-       
-
         <div class="container">
-                                            
-                <h2>My Dashboard <small> Last Updated on August 6th, 11:00 PM</small></h2><hr>
-
+                <% if current_user %>                            
+                <h2>My Dashboard</h2><hr>
+                <% end %>
 
                      
             
-            
+            <% if current_user %>
                 <div class="row">
                     <div class="span3 well">
                         <ul class="blue_list nav nav-list">
                             
-                            <li class=""><a href="#alerts" id="red" class="alert_class" style="color: #fff;" data-toggle="tab">You have a new Alert!</a></li><li class="nav-divider"></li>                            
+                                                    
                             
                             <li class="nav-header">Main Menu</li>
 
 
-                           	<li class=""><%= link_to 'Overview', todos_path, class: 'blue_list' %></li>
+                           	<li class=""><%= link_to 'Tasks', todos_path, class: 'blue_list' %></li>
                             <li class=""><%= link_to 'My Plants', plants_path, class: 'blue_list' %></li>
 
-                            <li class="nav-header">Settings</li>
+                            <li class="nav-header">Account</li>
 
-                            <li class=""><a href="#settings" data-toggle="tab" class="blue_list" >Account</a></li>
-                            <li class=""><a href="#" class="blue_list">Logout</a></li>
+                            <li class=""><%= link_to 'Settings', edit_user_registration_path, class: 'blue_list' %></li>
+                            <li class=""><%= link_to 'Logout', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }, class: 'blue_list' %></li>
 
 
                         </ul>
                     </div>
+
                     <div class="span8 well well-small" style="float:right;">
                         <div class="tabbable"> 
                             <div class="tab-content">
@@ -111,11 +111,15 @@
                         </div>
                     </div>
                 </div>
-            
+                <% else %>
+                <div class="span4 well well-small" style="margin:0 auto; float: none;">
+                    <%= yield %>
+                </div>
+            <%end%>
 
 
                         <hr>
-
+            <div style='clear: both;'></div>
             <footer>
                 <p>© Growify 2013. Developed as part of YRS 2013 by Ben, Maddy, Dan and Alex </p>
                 

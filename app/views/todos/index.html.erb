@@ -1,12 +1,23 @@
-<h2>Overview</h2>
+<h3>Tasks</h3>
 
 <style type="text/css">
 tbody {
-  color:#dddddd;
+  color:white;
 }a {
   color:#ddd;
 }
 </style>
+
+<% if @todos.size == 0 %>
+<p>You have no tasks.</p>
+<% end %>
+
+
+<% if Plant.where(user: current_user).size == 0 %>
+<%= link_to 'New Plant', new_plant_path, class: 'newplantlink' %>
+<% end %>
+
+
 <table>
   <!-- <thead>
     <tr>
@@ -20,7 +31,7 @@ tbody {
     <% @todos.each_with_index do |todo, i| %>
       <tr  class="<%= todo.priority %>">
         <td class="donebutton"><%= button_to 'Done', todo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to todo.plant.name, todo.plant, style:'color:#ddd;' %></td>
+        <td><%= link_to todo.plant.name, todo.plant, style:'color:white;' %></td>
         <td><%= todo.message %></td>
       </tr>
     <% end %>
