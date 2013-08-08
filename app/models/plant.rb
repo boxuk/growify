@@ -6,7 +6,15 @@ class Plant < ActiveRecord::Base
 	belongs_to :user
 	after_update :check_levels
 
+	before_create :set_defaults
 
+
+	def set_defaults
+	  self.moisture_level = 0
+	  self.temperature = 0
+	  self.light_level = 0
+	  self.humidity_level = 0
+	end
 
 	def check_levels
 		if moisture_level < 400

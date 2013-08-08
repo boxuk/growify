@@ -1,5 +1,5 @@
                     <h3>At a glance </h3>
-                                    <% @weather.inspect %>
+                                    <%= @weather.inspect %>
                                         <div class="span3" style="text-align:center; ">
                                             <br>
                                             <br>                                        
@@ -13,7 +13,7 @@
                                             <table class="table table-bordered table-hover pull-right" style="background-color: #fff;margin-top:-150px;">
                                                 <tbody><tr>
                                                     <td>Temperature</td>
-                                                    <td><%= @weather["location"]["city"] %></td>
+                                                    <td><%= @weather["image"]["display_location"]["temp_c"] %></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Windchill</td>

@@ -5,7 +5,7 @@
 
         <div id="image_container">
                 <% @plants.each do |plant| %>
-                  <%= link_to image_tag("Food/#{ plant.name }.jpg", class: 'class-name'), plant %>                    
+                  <%= link_to image_tag("Food/#{ plant.name }.jpg", class: 'class-name', data: { toggle: 'tooltip' }, :title => "Moiusture Level: #{ plant.moisture_level } Light Level: #{ plant.light_level} Humidity Level #{plant.humidity_level} Temperature: #{plant.temperature}"), plant %>                    
                <% end %>
                <%= link_to image_tag("new.jpg", class: 'class-name'), new_plant_path %>
 
