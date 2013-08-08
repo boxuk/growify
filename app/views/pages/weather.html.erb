@@ -5,7 +5,7 @@
                                             <br>                                        
                                             <%= image_tag @weather["current_observation"]["icon_url"] %>
                                             <span>Scattered Clouds</span>
-                                            <h2>72C</h2>
+                                            <h2><%= @weather['current_observation']['temp_c'] %>°C</h2>
                                             <%= @weather["location"]["city"] %>
                                            
                                         </div>
@@ -13,7 +13,7 @@
                                             <table class="table table-bordered table-hover pull-right" style="background-color: #fff;margin-top:-150px;">
                                                 <tbody><tr>
                                                     <td>Temperature</td>
-                                                    <td><%= @weather["image"]["display_location"]["temp_c"] %></td>
+                                                    <td><%= @weather['current_observation']['temp_c'] %></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Windchill</td>

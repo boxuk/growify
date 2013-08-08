@@ -1,6 +1,6 @@
 Growify::Application.routes.draw do
   get "pages/home"
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "users/registrations"}
   resources :todos
   resources :plants
 
