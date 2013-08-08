@@ -5,6 +5,7 @@ Growify::Application.routes.draw do
   resources :plants
 
   match 'weather' => 'pages#weather', :via => :get
+  match 'presentation' => 'pages#presentation', :via => :get
 
   match 'plants/:id/:moisture' => 'plants#update_moisture', :via => :get
 
