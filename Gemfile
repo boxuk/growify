@@ -7,6 +7,7 @@ end
 gem 'rails_12factor'
 gem 'sass-rails'
 gem 'pg'
+gem 'thin'
 
 gem 'uglifier', '>= 1.3.0'
 
