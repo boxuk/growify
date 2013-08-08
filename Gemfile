@@ -11,7 +11,6 @@ gem 'pg'
 gem 'uglifier', '>= 1.3.0'
 
 gem 'coffee-rails'
-gem 'paper_trail', github: 'airblade/paper_trail', branch: 'rails4'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

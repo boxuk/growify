@@ -1,12 +1,3 @@
-GIT
-  remote: git://github.com/airblade/paper_trail.git
-  revision: c441a5de2d61042126bb042c3c18012fca3af32b
-  branch: rails4
-  specs:
-    paper_trail (2.7.2)
-      activerecord (~> 4.0)
-      railties (~> 4.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -153,7 +144,6 @@ DEPENDENCIES
   devise
   jbuilder (~> 1.2)
   jquery-rails
-  paper_trail!
   pg
   rails (= 4.0.0)
   rails_12factor
