@@ -2,7 +2,7 @@
 
 class Plant < ActiveRecord::Base
 
-    has_paper_trail
+    #has_paper_trail
 
 	has_many :todos
 	belongs_to :user
