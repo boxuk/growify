@@ -1,0 +1,66 @@
+                    <h3>At a glance </h3>
+                                    <% @weather.inspect %>
+                                        <div class="span3" style="text-align:center; ">
+                                            <br>
+                                            <br>                                        
+                                            <%= image_tag @weather["current_observation"]["icon_url"] %>
+                                            <span>Scattered Clouds</span>
+                                            <h2>72C</h2>
+                                            <%= @weather["location"]["city"] %>
+                                           
+                                        </div>
+                                        <div class="span5 pull-right">
+                                            <table class="table table-bordered table-hover pull-right" style="background-color: #fff;margin-top:-150px;">
+                                                <tbody><tr>
+                                                    <td>Temperature</td>
+                                                    <td><%= @weather["location"]["city"] %></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Windchill</td>
+                                                    <td>NA</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Wind</td>
+                                                    <td>From the North at 9.0 MPH Gusting to 9.0 MPH</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Relative Humidity</td>
+                                                    <td>77%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Pressure</td>
+                                                    <td>1005 (mb) / 29.68 (in)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Pressure Trend</td>
+                                                    <td>NA</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Dewpoint</td>
+                                                    <td>68 F (20 C)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Heat Index</td>
+                                                    <td>NA</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Feels Like</td>
+                                                    <td>75.6 F (24.2 C)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Visibility</td>
+                                                    <td>10.0 (mi) / 10.0 (km)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Solar Radiation</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>UV</td>
+                                                    <td>3</td>
+                                                </tr>
+                                                
+                                            </tbody></table>
+                                        </div>
+                                        
+                                    </div>

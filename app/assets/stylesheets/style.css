@@ -44,3 +44,10 @@ ul {
     margin-bottom: 20px;
 }
 
+#image_container { width:600px; overflow:hidden; }
+#image_container img { width:150px; margin:5px; float:center; display:inline; }
+.class-name {
+    visibility: none;
+}
+
+

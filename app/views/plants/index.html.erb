@@ -1,11 +1,16 @@
 
-
 <h3>My plants</h3>
 
 
-<div class="tab-pane" id="plants">
+
+        <div id="image_container">
+                <% @plants.each do |plant| %>
+                  <%= link_to image_tag("Food/#{ plant.name }.jpg", class: 'class-name'), plant %>                    
+               <% end %>
+               <%= link_to image_tag("new.jpg", class: 'class-name'), new_plant_path %>
+
                                     
- 
+                                       </div>
 <!--
 <table>
   <thead>
@@ -33,4 +38,3 @@
 
 <br>
 
-<%= link_to image_tag("new.jpg"), new_plant_path %>

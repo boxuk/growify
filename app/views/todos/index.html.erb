@@ -5,10 +5,9 @@
 <% @weather.inspect %>
 
 <p style="font-weight:bold;">Location:
-<%= @weather["results"].first["name"] %>
-<%# @weather["location"]["city"] %>
+<%= @weather["location"]["city"] %>
 &nbsp;&nbsp;Weather:
-<%# image_tag @weather["current_observation"]["icon_url"] %>
+<%= image_tag @weather["current_observation"]["icon_url"] %>
 </p>
 
 <style type="text/css">
