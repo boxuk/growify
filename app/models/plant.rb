@@ -1,8 +1,12 @@
+
+
 class Plant < ActiveRecord::Base
 
 	has_many :todos
 	belongs_to :user
 	after_update :check_levels
+
+
 
 	def check_levels
 		if moisture_level < 400
@@ -20,3 +24,4 @@ class Plant < ActiveRecord::Base
 		end
 	end
 end
+
