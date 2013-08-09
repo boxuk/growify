@@ -7,6 +7,7 @@ end
 gem 'rails_12factor'
 gem 'pg'
 gem "puma"
+gem 'sass-rails'
 
 gem 'uglifier', '>= 1.3.0'
 #gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
